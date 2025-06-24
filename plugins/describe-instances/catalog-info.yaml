@@ -5,9 +5,8 @@ metadata:
   description: Página para listar instâncias EC2 de perfis AWS
   tags:
     - aws
-    - ec2
     - plugin
 spec:
   type: plugin
-  lifecycle: production
-  owner: your-team-name
+  lifecycle: development
+  owner: everton.cozzi
