@@ -6,6 +6,10 @@ metadata:
   tags:
     - aws
     - plugin
+  links:
+    - url: http://localhost:3000/describe-instances
+      title: Listar Instancias
+      icon: dashboard
 spec:
   type: plugin
   lifecycle: development
