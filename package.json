@@ -55,6 +55,7 @@
   "dependencies": {
     "@aws-sdk/client-ec2": "^3.835.0",
     "@aws-sdk/client-sts": "^3.835.0",
+    "@backstage/plugin-jenkins": "^0.9.10",
     "@mui/icons-material": "^7.1.2",
     "file-saver": "^2.0.5",
     "xlsx": "^0.18.5"

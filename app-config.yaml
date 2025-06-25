@@ -44,6 +44,17 @@ integrations:
     #   token: ${GHE_TOKEN}
 
 proxy:
+  reviveConsumedRequestBodies: true
+  endpoints:
+    '/jenkins':
+      target: 'http://localhost:8080'
+      headers:
+        Authorization: Basic ${JENKINS_AUTH_HEADER}
+      allowedHeaders: ['Authorization']
+      allowedMethods: ['GET', 'POST']
+      credentials: dangerously-allow-unauthenticated
+
+
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:

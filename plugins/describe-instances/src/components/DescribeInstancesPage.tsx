@@ -9,6 +9,7 @@ import {
   Table,
 } from '@backstage/core-components';
 import { Select } from '@backstage/core-components';
+//import Select from '@mui/material/Select';
 import { Alert, Grid, Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from '@mui/material';
 import { useApi, fetchApiRef } from '@backstage/core-plugin-api';
 import * as XLSX from 'xlsx';
@@ -137,7 +138,7 @@ export const DescribeInstancesPage = () => {
   };
 
   return (
-    <Page themeId="tool">
+    <Page themeId='group'>
       <Header
         title="Describe Instances"
         subtitle="Listagem de instâncias AWS"
@@ -151,17 +152,16 @@ export const DescribeInstancesPage = () => {
           />
         )}
 
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <Select
-              label="Selecione um AWS Profile"
+        <Grid container spacing={2} style={{ backgroundColor: '#283747', padding: 16 }}>
+          <Grid item xs={4}>
+             <Select
+              placeholder=""
+              label="Selecione um Profile"
               items={profiles}
               selected={selectedProfile}
               onChange={value => setSelectedProfile(value as string)}
-            />
-          </Grid>
+              />
 
-          <Grid item xs={12} md={6}>
             <LinkButton
               to="#"
               variant="contained"

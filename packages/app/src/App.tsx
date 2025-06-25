@@ -37,6 +37,8 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { DescribeInstancesPage } from '@internal/plugin-describe-instances';
 
+import { JenkinsTrigger } from './components/JenkinsTrigger';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -96,6 +98,9 @@ const routes = (
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
     <Route path="/describe-instances" element={<DescribeInstancesPage />} />
+    <Route path="/jenkins-trigger" element={<JenkinsTrigger />} />
+    
+
   </FlatRoutes>
 );
 
